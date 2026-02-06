@@ -1,5 +1,27 @@
 local M = {}
 
+-- Compiler.nvim keymaps
+M.compiler = {
+  plugin = true,
+  n = {
+    -- Open compiler
+    ["<F6>"] = {
+      "<cmd>CompilerOpen<CR>",
+      "Open compiler",
+    },
+    -- Redo last selected option
+    ["<S-F6>"] = {
+      "<cmd>CompilerStop<CR><cmd>CompilerRedo<CR>",
+      "Redo last compiler option",
+    },
+    -- Toggle compiler results
+    ["<S-F7>"] = {
+      "<cmd>CompilerToggleResults<CR>",
+      "Toggle compiler results",
+    },
+  },
+}
+
 M.dap = {
   plugin = true,
   n = {
