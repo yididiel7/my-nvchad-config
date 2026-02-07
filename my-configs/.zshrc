@@ -1,4 +1,4 @@
-# ==============================================================================
+/# ==============================================================================
 # ------------------------------------------------------------------------------
 # 🚀 TOOL INITIALIZATION & CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -146,7 +146,7 @@ path=(
   "/usr/lib/go/bin"
   "/opt/firefox"
   "$HOME/bin"
-  "$HOME/srhills/shims"
+  "$HOME/usr/shims"
   $path
 )
 
@@ -534,7 +534,7 @@ if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
 fi
 
 # opencode
-export PATH=/home/srhills/.opencode/bin:$PATH
+export PATH=/home/usr/.opencode/bin:$PATH
 export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 export DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/bus"
 export PATH="/usr/lib/ccache/bin/:$PATH"
@@ -555,7 +555,7 @@ fi
 alias huggingface-cli=hf
 
 # bun completions
-[ -s "/home/srhills/.bun/_bun" ] && source "/home/srhills/.bun/_bun"
+[ -s "/home/usr/.bun/_bun" ] && source "/home/srhills/.bun/_bun"
 
 # lscolors config file
 # bun
