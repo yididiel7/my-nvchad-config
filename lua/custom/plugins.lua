@@ -146,15 +146,18 @@ local plugins = {
   -- Compiler.nvim - Build and run code
   {
     "Zeioth/compiler.nvim",
-    cmd = {"CompilerOpen", "CompilerToggleResults", "CompilerRedo"},
+    cmd = {"CompilerOpen", "CompilerToggleResults", "CompilerRedo", "CompilerStop"},
     dependencies = { "stevearc/overseer.nvim", "nvim-telescope/telescope.nvim" },
     opts = {},
+    config = function()
+      require("core.utils").load_mappings("compiler")
+    end,
   },
   -- The task runner compiler.nvim uses
   {
     "stevearc/overseer.nvim",
     commit = "6271cab7ccc4ca840faa93f54440ffae3a3918bd",
-    cmd = { "CompilerOpen", "CompilerToggleResults", "CompilerRedo" },
+    cmd = { "CompilerOpen", "CompilerToggleResults", "CompilerRedo", "CompilerStop" },
     opts = {
       task_list = {
         direction = "bottom",
